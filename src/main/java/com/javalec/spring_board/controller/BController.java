@@ -72,10 +72,10 @@ public class BController {
 	}
 	
 	@RequestMapping("/reply_view")
-	public String reply_view(HttpServletRequest request, Model model) {
+	public String reply_view(HttpServletRequest request, Model model){
 		System.out.println("reply_view()");
 		
-		model.addAttribute("request",request);
+		model.addAttribute("request", request);
 		command = new BReplyViewCommand();
 		command.execute(model);
 		
@@ -86,7 +86,7 @@ public class BController {
 	public String reply(HttpServletRequest request, Model model) {
 		System.out.println("reply()");
 		
-		model.addAttribute("request",request);
+		model.addAttribute("request", request);		
 		command = new BReplyCommand();
 		command.execute(model);
 		
